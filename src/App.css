@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #fff5f5, #ffe5e5);
+}
+
+.valentine-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  color: #e83e8c;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in;
+}
+
+.photo-gallery {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  animation: slideUp 1s ease-out;
+}
+
+.photo-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.photo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(232,62,140,0.2);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.05);
+}
+
+.photo-card p {
+  text-align: center;
+  margin-top: 1rem;
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .valentine-container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .photo-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+}
+/* Añade estos estilos al final del archivo */
+
+.carousel-container {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.carousel-slide {
+  position: relative;
+  padding: 20px;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.carousel-slide p {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  color: #e83e8c;
+  text-align: center;
+  width: auto;
+  min-width: 200px;
+}
+
+/* Personalización de flechas y dots del carrusel */
+.slick-prev:before,
+.slick-next:before {
+  color: #e83e8c;
+  font-size: 24px;
+}
+
+.slick-dots li button:before {
+  color: #e83e8c;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #e83e8c;
+}
+/* Añade estos estilos al final del archivo */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.valentine-container {
+  max-width: 800px; /* Ajusta el ancho máximo según sea necesario */
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-gallery {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  animation: slideUp 1s ease-out;
+}
+.letter-wrapper {
+  width: 1900px;             /* Ancho fijo para el papel */
+  margin: 0 auto;           /* Centrado horizontal */
+  padding: 20px;
+  min-height: 100vh;        /* Ocupará al menos toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Centrado vertical */
+  align-items: center;
+}
+
+.letter-content {
+  width: 100%;
+  text-align: left;
+  font-size: 2rem;
+  line-height: 1.8;
+  padding: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: #333;           /* Color de texto oscuro */
+  background: #fff;      /* Fondo blanco para el papel */
+  border-radius: 10px;   /* Opcional: para redondear las esquinas */
+}
+
+.letter-title {
+  color: red;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background-color: #a0522d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #8b4513;
+}
+.regalo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Espacio opcional entre la imagen y el botón */
+}
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  animation: float 5s linear infinite;  /* Duración reducida a 5s */
+  opacity: 0;
+}
+
+/* Aumenta cantidad y ajusta delays */
+.floating-hearts .heart:nth-child(1) {
+  left: 10%;
+  font-size: 2rem;
+  animation-delay: 0s;
+}
+.floating-hearts .heart:nth-child(2) {
+  left: 25%;
+  font-size: 2.5rem;
+  animation-delay: 0.5s;
+}
+.floating-hearts .heart:nth-child(3) {
+  left: 40%;
+  font-size: 1.8rem;
+  animation-delay: 1s;
+}
+.floating-hearts .heart:nth-child(4) {
+  left: 55%;
+  font-size: 2.2rem;
+  animation-delay: 1.5s;
+}
+.floating-hearts .heart:nth-child(5) {
+  left: 70%;
+  font-size: 2rem;
+  animation-delay: 2s;
+}
+.floating-hearts .heart:nth-child(6) {
+  left: 85%;
+  font-size: 2.3rem;
+  animation-delay: 2.5s;
+}
+.floating-hearts .heart:nth-child(7) {
+  left: 15%;
+  font-size: 2.1rem;
+  animation-delay: 3s;
+}
+.floating-hearts .heart:nth-child(8) {
+  left: 35%;
+  font-size: 2.4rem;
+  animation-delay: 3.5s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+/* Estilos para rosas flotantes */
+.floating-roses {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.rose {
+  position: absolute;
+  animation: float 5s linear infinite;
+  opacity: 0;
+}
+
+/* Distribuye las rosas en distinto % y con delays variados */
+.floating-roses .rose:nth-child(1) {
+  left: 15%;
+  font-size: 2rem;
+  animation-delay: 0.2s;
+}
+.floating-roses .rose:nth-child(2) {
+  left: 35%;
+  font-size: 2.3rem;
+  animation-delay: 0.7s;
+}
+.floating-roses .rose:nth-child(3) {
+  left: 55%;
+  font-size: 2rem;
+  animation-delay: 1.2s;
+}
+.floating-roses .rose:nth-child(4) {
+  left: 75%;
+  font-size: 2.5rem;
+  animation-delay: 1.8s;
+}
+.floating-roses .rose:nth-child(5) {
+  left: 25%;
+  font-size: 2.2rem;
+  animation-delay: 2.3s;
+}
+.floating-roses .rose:nth-child(6) {
+  left: 45%;
+  font-size: 2.5rem;
+  animation-delay: 2.8s;
+}
+.floating-roses .rose:nth-child(7) {
+  left: 65%;
+  font-size: 2rem;
+  animation-delay: 3.3s;
+}
+.floating-roses .rose:nth-child(8) {
+  left: 85%;
+  font-size: 2.4rem;
+  animation-delay: 3.8s;
+}
+
+/* La animación float ya la tienes definida; se aplicará tanto a .heart como a .rose */
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
